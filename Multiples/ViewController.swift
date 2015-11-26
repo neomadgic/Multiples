@@ -13,7 +13,7 @@ class ViewController: UIViewController
     //Variables
     var currentNumber = 0
     var multiplesNum = 0
-    var maxNum = 5
+    var currentTurn = 0
     
     //Outlets
     @IBOutlet weak var logo: UIImageView!
@@ -33,14 +33,60 @@ class ViewController: UIViewController
             addBtn.hidden = false;
             messageLbl.text = "Press add to add \(multiplesNum) to 0";
             messageLbl.hidden = false;
+            currentNumber = 0;
+            currentTurn = 0;
             
         }
     }
 
     @IBAction func whenAddBtnPushed(sender: UIButton)
     {
+        if isGameover()
+        {
+            restartGame();
+        }
+        else
+        {
+            currentTurn++
+            refreshLbl();
+            refreshNum();
+        }
     }
 
+    
+    func refreshLbl()
+    {
+        messageLbl.text = "\(currentNumber) + \(multiplesNum) = \(currentNumber + multiplesNum)"
+        
+    }
+    
+    func refreshNum()
+    {
+        currentNumber = currentNumber + multiplesNum;
+    }
+    
+    func isGameover() -> Bool
+    {
+        if currentTurn >= 5
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
+    func restartGame()
+    {
+        logo.hidden = false;
+        playBtn.hidden = false;
+        inputBar.hidden = false;
+        addBtn.hidden = true;
+        messageLbl.hidden = true;
+        inputBar.text = "";
+
+    }
 
 }
 

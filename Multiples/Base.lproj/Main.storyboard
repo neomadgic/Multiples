@@ -56,7 +56,7 @@
                                     <constraint firstAttribute="width" constant="285" id="ALr-t9-aw1"/>
                                     <constraint firstAttribute="height" constant="65" id="lm2-Ww-ymh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
