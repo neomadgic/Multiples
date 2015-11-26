@@ -26,6 +26,9 @@
                                     <constraint firstAttribute="height" constant="135" id="a2J-iu-VRk"/>
                                 </constraints>
                                 <state key="normal" image="PinkPlay"/>
+                                <connections>
+                                    <action selector="whenPlayBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7k6-Va-uzS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number you want multiples of" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-AK-7Nm" userLabel="InputBar">
                                 <rect key="frame" x="164" y="320" width="280" height="30"/>
@@ -43,6 +46,9 @@
                                     <constraint firstAttribute="width" constant="135" id="zP5-Rm-Drz"/>
                                 </constraints>
                                 <state key="normal" image="GreenAdd"/>
+                                <connections>
+                                    <action selector="whenAddBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0i-tb-8dj"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-V3-b4i" userLabel="MessageLbl">
                                 <rect key="frame" x="164" y="214" width="285" height="65"/>
@@ -80,6 +86,13 @@
                             <constraint firstItem="CpN-AK-7Nm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uey-Vx-sO2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="FRq-V2-Lg5" id="rPS-PE-F5F"/>
+                        <outlet property="inputBar" destination="CpN-AK-7Nm" id="51T-go-ySk"/>
+                        <outlet property="logo" destination="4m0-Ei-0xP" id="roN-1w-Ggt"/>
+                        <outlet property="messageLbl" destination="gtL-V3-b4i" id="O58-S0-OmJ"/>
+                        <outlet property="playBtn" destination="0o1-iX-Kac" id="sor-U1-hGc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
